@@ -19,7 +19,10 @@ from django.contrib import admin
 from django.urls import path
 from small_instagram.views import Helloworld
 
+
 urlpatterns = [
-    path('', Helloworld.as_view(), name='Helloworld')
+    path('', Helloworld.as_view(), name='Helloworld'),
+    path('admin/', admin.site.urls),
 ]
+
 
