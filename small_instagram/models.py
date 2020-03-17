@@ -1,5 +1,6 @@
 # Create your models here.
 from django.db import models
+from django.urls import reverse, reverse_lazy
 from imagekit.models import ProcessedImageField
 
 
@@ -13,3 +14,7 @@ class Post(models.Model):
         blank=True,
         null=True,
     )
+
+    def get_absolute_url(self):
+        return reverse("posts_detail", args=[str(self.id)])
+
