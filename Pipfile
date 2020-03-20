@@ -9,6 +9,11 @@ verify_ssl = true
 django = "*"
 django-imagekit = "*"
 pillow = "*"
+beautifulsoup4 = "*"
+beautifulsoup = "*"
+automium-web = "*"
+requests = "*"
+view = "*"
 
 [requires]
 python_version = "3.7"
