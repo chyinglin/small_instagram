@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <p>要爬取的網頁是_POST：</p>
+    <p>Please input the web page to crawl：</p>
         <form action="/../crawl/result" method="post">
             {% csrf_token %}
-        輸入網址:<input type="text" name="title"> <br>
+        Url:<input type="text" name="title"> <br>
         <input type="submit"value="送出">
     </form>
 </body>

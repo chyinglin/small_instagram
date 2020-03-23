@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Apple Real New</title>
+</head>
+<body>
+    <h2>Apple Real News {{date}}</h2>
+    <table border="3" cellpadding="4" cellspacing="2">
+        <th>時間</th>
+        <th>分類</th>
+        <th>標題</th>
+        <th>網址</th>
+
+
+        {% for time, category, title, link in all %}
+        <tr>
+            <td>{{time}}</td>
+            <td>{{category}}</td>
+            <td><a  Target="_blank" href="{{link}}">{{title}}</a></td>
+            <td>{{link}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

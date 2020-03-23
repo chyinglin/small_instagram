@@ -13,6 +13,7 @@ urlpatterns = [
     ###
     path('crawl/', crawl_view.crawl, name='crawl'),
     path('crawl/result', crawl_view.post_crawl),
+    path('crawl/news', crawl_view.crawl_news, name='crawl_news'),
 
 ]
 
