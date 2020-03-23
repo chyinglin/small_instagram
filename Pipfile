@@ -13,7 +13,6 @@ beautifulsoup4 = "*"
 beautifulsoup = "*"
 automium-web = "*"
 requests = "*"
-view = "*"
 
 [requires]
 python_version = "3.7"
