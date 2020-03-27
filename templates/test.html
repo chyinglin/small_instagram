@@ -1,13 +1,33 @@
 hello, world!
 
-<div>
-  <a href="{% url 'home' %}">Go to Post</a>
-</div>
+  {% if request.user.is_authenticated %}
+<ul>
+    <li>
+      Hi, {{request.user.username}}
+    </li>
+    <li>
+      <a href="{% url 'logout' %}">Logout</a>
+    </li>
+</ul>
 
-<div>
-  <a href="{% url 'crawl' %}">Go to Crawl</a>
-</div>
+  <div>
+    <a href="{% url 'home' %}">Go to Post</a>
+  </div>
 
-<div>
-  <a href="{% url 'crawl_news' %}">Go to News</a>
-</div>
+  <div>
+    <a href="{% url 'crawl' %}">Go to Crawl</a>
+  </div>
+
+  <div>
+    <a href="{% url 'crawl_news' %}">Go to News</a>
+  </div>
+
+
+  {% else %}
+<ul>
+    <li>
+      <a href="{% url 'login' %}">Login</a>
+    </li>
+</ul>
+  {% endif %}
+
